@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+ :root {
+--transparente: rgb(0, 0, 0, 0);
+--titulos: rgb(245, 247, 250);
+--fondoetiquetas: rgb(255, 255, 255);
+--fondos: rgb(30, 30, 47, .9);
+--subtitulos: rgb(197, 224, 235);
+--bordes: rgb(173, 181, 189);
+--fondo: rgb(35, 45, 55);
+--sombratitulos: 0px 0px 20px #000000;
+--sombrapronunciada: 0px 0px 500px #000000;
+--sombrabotones: 0px 0px 20px #0000007c;
+ }
+ 
+/* --- HEADER --- */
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.header-pres {
+    display: flex;
+    flex-direction: column; /* pone el nav arriba del section */
+    background-image: url(imagenes/background-pres.jpg);
+    background-size: cover;
+    min-height: 100vh; /* ocupa toda la pantalla */
+}
+
+.nav-pres {
+    color: var(--titulos);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(180deg, #000000bb 0%, var(--transparente) 100%);
+    padding: 0px 20px;
+}
+
+.section-pres {
+    flex: 1; /* ocupa el espacio sobrante del nav */
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center; /* vertical */
+    text-align: center;
+    color: var(--titulos);
+}
+
+.links-pres {
+    transition: 0.5s;
+    text-decoration: none;
+    color: var(--titulos);
+    padding: 0px 5px;
+}
+
+.links-pres:hover {
+    transition: 0.5s;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.titulo {
+    font-size: 150px;
+    margin: 0;
+    text-shadow: var(--sombratitulos);
+    cursor: default;
+}
+
+.eslogan {
+    font-size: 30px;
+    color: var(--subtitulos);
+    margin: 0;
+    text-shadow: var(--sombratitulos);
+    cursor: default;
+}
+
+/* --- CONTENIDO --- */
+
+.contenedor-etiqueta {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch; /* coloca a todas las etiquetas del mismo tamaño independientemente de su contenido */
+    flex-grow: 1;  /* para el ancho igual: Flex-grow con un valor de 1 */
+    flex-basis: 0; /* asegura que inicialmente no tomen más espacio del necesario antes de repartirse */
+}
+
+.section-etiquetas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px 20px 100px;
+    gap: 20px;
+    background-color: var(--fondo);
+    box-shadow: var(--sombrapronunciada);
+    height: auto;
+    flex-wrap: wrap;
+}
+
+.etiqueta {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch; /* coloca a todas las etiquetas del mismo tamaño independientemente de su contenido */
+    flex-grow: 1;  /* para el ancho igual: Flex-grow con un valor de 1 */
+    flex-basis: 0; /* asegura que inicialmente no tomen más espacio del necesario antes de repartirse */
+    justify-content: center;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.titulo-etiqueta {
+    text-align: center; 
+    cursor: default; 
+    background-color: var(--titulos);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: var(--sombrabotones);
+}
+
+.texto-etiqueta {
+    color: white;
+    padding: 0px 30px; 
+    cursor: default;
+    text-align: center;
+}
+
+.img-etiqueta {
+    max-width: 100%;
+    height: auto;
+    box-shadow: var(--sombrabotones);
+}
+
+
+.enlace-etiquetas {
+    transition: 0.5s;
+    display: block;
+    background-color: var(--subtitulos);
+    width: 100%;
+    text-decoration: none;
+    border-radius: 10px;
+    justify-content: center;
+    padding: 12px 0;
+}
+
+.enlace-etiquetas:hover {
+    transition: 0.5s;
+    background-color: blueviolet;
+    color: rgb(197, 224, 235);
+    box-shadow: var(--sombrabotones);
+    font-weight: bold;
+    letter-spacing: 1px;    
+}
+
+/* --- REGISTRATE --- */
+
+.section-registrate {
+    background-image: url(imagenes/registrate.png);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* horizontal */
+    align-items: center; /* vertical */
+    text-align: center;
+    min-height: 100vh;
+    padding: 20px 80px 30px 80px;
+}
+
+.texto-nos {
+    color: white;
+    padding: 0px 200px 0px 200px;
+}
+
+.etiqueta-registro {
+    background-color: white;
+    box-shadow: var(--sombratitulos);
+    border-radius: 10px;
+    padding: 20px 30px 20px 30px;
+}
+
+.dato {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.datos-is {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inputs-text {
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #000000;
+}
+
+.enlaces-is {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.is {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    background-color: rgb(197, 224, 235);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.is:hover {
+    transition: 0.5s;
+    background-color: blueviolet;
+    color: rgb(197, 224, 235);
+    box-shadow: var(--sombrabotones);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* --- PIE --- */
+
+.pie {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--fondos);
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: var(--sombrapronunciada);
+}
+
+.texto-pie {
+    color: var(--subtitulos);
+}
+
+.enlace-pie {
+    color: var(--subtitulos);
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.enlace-pie:hover {
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+@media screen and (max-width:900px) {
+    .texto-nos {
+        padding: 0px 50px 0px 50px;
+    }
+
+    .texto-etiqueta {
+        padding: 0px;
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .section-etiquetas {
+        flex-direction: column;
+    }
+
+    .titulo {
+        font-size: 100px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    #texto-registro {
+        display: none;
+    }
+    
+    .logo {
+        display: none;
+    }
+
+    .nav-pres {
+        justify-content: center;
+        padding: 20px 0px 20px 0px;
+    }
+
+    .titulo {
+        font-size: 100px;
+    }
+
+    .texto-etiqueta {
+        padding: 0px;
+        text-align: justify;
+    }
+}
